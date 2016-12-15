@@ -40,7 +40,7 @@
 
 
 /**  自定义填充公共 name 字段  */public class MyMetaObjectHandler implements IMetaObjectHandler &amp;#123;	/**">
-<meta property="og:updated_time" content="2016-12-15T07:49:12.567Z">
+<meta property="og:updated_time" content="2016-12-15T15:12:58.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="公共字段自动填充">
 <meta name="twitter:description" content="公共字段字段填充
@@ -136,12 +136,12 @@ var _hmt = _hmt || [];
 <ul>
 <li>spring 启动注入 MyMetaObjectHandler 配置</li>
 </ul>
-<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- MyBatis SqlSessionFactoryBean 配置 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean"</span>&gt;</span></div><div class="line">	....</div><div class="line"></div><div class="line">    <span class="comment">&lt;!-- 公共字段填充处理器 --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"metaObjectHandler"</span> <span class="attr">ref</span>=<span class="string">"myMetaObjectHandler"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"></div><div class="line"><span class="comment">&lt;!-- 自定义处理器 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"myMetaObjectHandler"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.test.MyMetaObjectHandler"</span> /&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><div class="line"><span class="comment">&lt;!-- MyBatis SqlSessionFactoryBean 配置 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"sqlSessionFactory"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"globalConfig"</span> <span class="attr">ref</span>=<span class="string">"globalConfig"</span>&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"globalConfig"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.mybatisplus.entity.GlobalConfiguration"</span>&gt;</span></div><div class="line">	<span class="comment">&lt;!-- 公共字段填充处理器 --&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"metaObjectHandler"</span> <span class="attr">ref</span>=<span class="string">"myMetaObjectHandler"</span> /&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- 自定义处理器 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"myMetaObjectHandler"</span> <span class="attr">class</span>=<span class="string">"com.baomidou.test.MyMetaObjectHandler"</span> /&gt;</span></div></pre></td></tr></table></figure>
 
               </div>
               
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2016-12-15T07:49:12.567Z" itemprop="dateModified">上次更新：2016-12-15</time>
+                <time class="article-footer-updated" datetime="2016-12-15T15:12:58.155Z" itemprop="dateModified">上次更新：2016-12-15</time>
                 <a href="keywords-transfer.html" class="article-footer-prev" title="关键词转义"><i class="fa fa-chevron-left"></i><span>上一页</span></a><a href="sql-injector.html" class="article-footer-next" title="自定义SQL注入"><span>下一页</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
