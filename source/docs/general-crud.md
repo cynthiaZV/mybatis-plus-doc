@@ -12,14 +12,6 @@ insert(T entity)
 描述：插入entity实体
 ```
 
-```java 选择性插入一条记录
-insertSelective(T entity)
-
-参数：entity 需要插入的实体类
-返回值：boolean 成功与否
-描述：null字段不插入
-```
-
 ```java 批量插入
 insertBatch(List<T> entityList)
 
@@ -44,14 +36,6 @@ deleteByMap(Map<String, Object> columnMap)
 描述：比如 columnMap.put("name", "zhangsan")，删除的时候将会去删除name为zhangsan的数据。
 ```
 
-```java 根据实体类选择性删除
-deleteSelective(T entity)
-
-参数：entity Entity的属性值作为删除条件
-返回值：boolean 成功与否
-描述：比如 entity.setName("zhangsan")，删除的时候将会去删除name为zhangsan的数据。
-```
-
 ```java 批量删除
 deleteBatchIds(List<PK> idList)
 
@@ -68,28 +52,12 @@ updateById(T entity)
 描述：通过ID更新entity
 ```
 
-```java 通过ID选择性更新数据
-updateSelectiveById(T entity)
-
-参数：entity 需要更新的实体类
-返回值：boolean 成功与否
-描述：null字段不更新
-```
-
 ```java 通过实体类构造where条件进行更新
 update(T entity, T whereEntity)
 
 参数：entity 需要更新的实体类 whereEntity 条件实体
 返回值：boolean 成功与否
 描述：比如 whereEntity.setName("zhangsan")，查找name为zhangsan的数据进行更新，更新的内容是entity中的数据
-```
-
-```java 通过实体类构造where条件进行选择性更新
-updateSelective(T entity, T whereEntity)
-
-参数：entity 需要更新的实体类 whereEntity 条件实体
-返回值：boolean 成功与否
-描述：null字段不更新
 ```
 
 ```java 通过ID批量更新
