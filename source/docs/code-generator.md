@@ -4,112 +4,7 @@ title: 代码生成器
 
 # 参数说明
 
-参数相关的配置，详见[config包](https://github.com/baomidou/mybatis-plus/tree/master/mybatis-plus/src/main/java/com/baomidou/mybatisplus/generator/config)类
-
-```java saveDir
-类型：String
-描述：生成代码存放目录
-```
-
-```java entityPackage
-类型：String
-描述：Entity类路径
-```
-
-```java mapperPackage
-类型：String
-描述：Mapper类路径
-```
-
-```java xmlPackage
-类型：String
-描述：Mapper对应的XML文件存放路径（默认为Mapper目录下的xml文件夹）
-```
-
-```java servicePackage
-类型：String
-描述：Service类路径
-```
-
-```java serviceImplPackage
-类型：String
-描述：ServiceImpl类路径（默认为Service目录下的impl文件夹）
-```
-
-```java superService
-类型：String
-描述：Service 父类包路径（通过该项，你可以自定义Service层的父类，实现自定义通用方法。若无需求，不用配置）
-```
-
-```java superServiceImpl
-类型：String
-描述：ServiceImpl 父类包路径（同上）
-```
-
-```java mapperName
-类型：String
-描述：自定义Mapper名称（采用"%s"做占位符，默认为"%sMapper"，生成后为FooMapper.java）
-```
-
-```java mapperXMLName
-类型：String
-描述：自定义XML名称（采用"%s"做占位符，默认为"%sMapper"，生成后为FooMapper.xml）
-```
-
-```java serviceName
-类型：String
-描述：自定义 Service 名称（采用"%s"做占位符，默认为"I%sService"，生成后为IFooService.java）
-```
-
-```java serviceImplName
-类型：String
-描述：自定义 ServiceImpl 名称（采用"%s"做占位符，默认为"%sServiceImpl"，生成后为FooServiceImpl.java）
-```
-
-```java tableNames
-类型：String[]
-描述：要生成代码的表名称（若为空就直接指定所有表，格式为逗号分割）
-```
-
-```java fileOverride
-类型：boolean
-描述：是否覆盖当前已有文件（true为覆盖，false为不覆盖）
-```
-
-```java dbPrefix
-类型：boolean
-描述：设置是否取消数据库前缀（例如`mp_user`生成实体类，false 为 MpUser.java , true 为 User.java）
-```
-
-```java dbColumnUnderline
-类型：boolean
-描述：设置数据库是否为下划线
-```
-
-```java dbDriverName
-类型：String
-描述：数据库驱动名（如com.mysql.jdbc.Driver）
-```
-
-```java dbUser
-类型：String
-描述：数据库username
-```
-
-```java dbPassword
-类型：String
-描述：数据库密码
-```
-
-```java dbUrl
-类型：String
-描述：数据库URL
-```
-
-```java idType
-类型：boolean
-描述：ID主键策略（表主键 ID 生成类型, 自增该设置无效。详见主键策略选择）
-```
+参数相关的配置，详见源码
 
 # 主键策略选择
 
@@ -253,7 +148,8 @@ public class MpGenerator {
 		};
 		mpg.setCfg(cfg);
 
-		// 自定义模板配置
+		// 自定义模板配置，可以 copy 源码 mybatis-plus/src/main/resources/template 下面内容修改，
+		// 放置自己项目的 src/main/resources/template 目录下, 默认名称一下可以不配置，也可以自定义模板名称
 		// TemplateConfig tc = new TemplateConfig();
 		// tc.setController("...");
 		// tc.setEntity("...");
